@@ -2,9 +2,21 @@
 
 - **Application:** Pricing optimization
 - **Portfolio project:** 06 of 15
-- **Status:** Project brief defined. Dataset acquisition, ML, application and MLOps implementation have not started.
+- **Status:** Source-derived CSV data is committed. ML models, the application and MLOps remain to be implemented.
 
 Part of [Tomas Ferrer's DS/ML portfolio](https://tomasferrer.com/).
+
+## Committed CSV dataset
+
+**Dataset:** UCI Online Retail II — product pricing subset
+
+**Coverage:** All source transactions for the 25 most frequently appearing StockCodes in the first 50,000 source rows; original values and source order retained across both workbook sheets.
+
+| CSV file | Rows |
+|---|---:|
+| [retail_pricing_products.csv](data/raw/retail_pricing_products.csv) | 49,894 |
+
+These are actual published observations or documented format conversions. See [source, license and limitations](data/DATASET.md) and [CSV schemas/checksums](data/csv-manifest.json).
 
 ## Project prompt
 
@@ -20,11 +32,9 @@ Write a short project charter defining the user, current baseline, primary busin
 
 ### Published dataset and raw data
 
-Candidate: one category of [Dominick's scanner data](https://www.chicagobooth.edu/research/kilts/research-data/dominicks), with product/store/week units, prices, margins and promotion information. The provider's academic-use restriction requires resolving suitability before a public release; acquire another suitable published dataset if this source does not fit. Do not substitute invented training histories.
+The committed source is **UCI Online Retail II — product pricing subset**. All source transactions for the 25 most frequently appearing StockCodes in the first 50,000 source rows; original values and source order retained across both workbook sheets. See [dataset documentation](data/DATASET.md) for original links, attribution, usage terms and limitations.
 
-**Additional source/access notes:** Begin with one category and its UPC/movement files. Provider limits use to academic research: this selection remains conditional on suitability for the intended public portfolio. Logged price variation alone does not establish causal elasticity
-
-Acquire a pinned source release into `data/raw/` and preserve the original bytes. Add a repeatable acquisition script and a manifest containing source URL, release/version, retrieval time, citation, terms, file sizes and SHA-256 checksums. Keep cleaned data in `data/interim/` and model-ready features/split assignments in `data/processed/`. Raw data stay out of Git unless redistribution is explicitly appropriate.
+Acquire a pinned source release into `data/raw/` and preserve the original bytes. Add a repeatable acquisition script and a manifest containing source URL, release/version, retrieval time, citation, terms, file sizes and SHA-256 checksums. Keep cleaned data in `data/interim/` and model-ready features/split assignments in `data/processed/`. Redistributable CSV exports and the documented supporting assets are committed; large source archives remain excluded from Git.
 
 Audit labels, decision-time feature availability, duplicates, missingness, class balance, and temporal/group structure. If the candidate cannot support the task or intended use, find another suitable published dataset or narrow the question. Generated fixtures and economic scenarios are supplementary, clearly labeled artifacts.
 
@@ -75,7 +85,7 @@ Use the smallest architecture that completes this lifecycle. Select real-time or
 
 ## Completion checklist
 
-- [ ] Published source acquired, checksum verified and provenance/profile recorded.
+- [x] Published source acquired, checksum verified and provenance/profile recorded.
 - [ ] Data audit, project charter, success criteria and evaluation protocol complete.
 - [ ] Baseline and trained ML component evaluated; artifacts and failure analysis saved.
 - [ ] Working application deployed with the exact evaluated model version.
@@ -84,4 +94,4 @@ Use the smallest architecture that completes this lifecycle. Select real-time or
 
 ## Current implementation
 
-This repository currently contains the implementation brief and Git exclusions. The dataset links identify starting sources; acquisition and model results will be documented as implementation proceeds.
+Published dataset observations, CSV exports, supporting assets where applicable, and provenance/checksum documentation are present. Models, application functionality and MLOps have not been implemented or evaluated yet.

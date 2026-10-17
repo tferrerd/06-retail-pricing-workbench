@@ -1,0 +1,30 @@
+{
+  "dataset": "UCI Online Retail II \u2014 product pricing subset",
+  "source_urls": [
+    "https://archive.ics.uci.edu/dataset/502/online+retail+ii"
+  ],
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "selection": "All source transactions for the 25 most frequently appearing StockCodes in the first 50,000 source rows; original values and source order retained across both workbook sheets.",
+  "notes": "Attribution: Daqing Chen / UCI. Replaces the originally proposed research-restricted Dominick's source. This is an observational purchase table, not a randomized pricing experiment or a complete product-availability log. Prices are observed; margins/costs and unobserved demand require explicit assumptions. Product selection uses the initial source rows and does not inspect future price outcomes. Selected StockCodes: 20914, 21034, 21181, 21212, 21232, 21479, 21485, 21527, 21733, 21843, 22086, 22111, 22112, 22114, 22125, 22138, 22139, 72756, 79323W, 82482, 84029E, 84029G, 84879, 85099B, 85123A",
+  "generated_at_utc": "2026-10-17T20:50:58.554145+00:00",
+  "files": [
+    {
+      "path": "data/raw/retail_pricing_products.csv",
+      "rows": 49894,
+      "columns": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "bytes": 4561569,
+      "sha256": "28da61e91189c069df5f85d58dd7029eb9b505c88968a97553c28e73663c37b2"
+    }
+  ],
+  "assets": []
+}
